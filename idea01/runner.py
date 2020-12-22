@@ -11,6 +11,13 @@ def best_of_n(agent1, agent2, n=20):
         env.run([agent1, agent2])
         p1_score = env.steps[-1][0]['reward']
         p2_score = env.steps[-1][1]['reward']
+
+        # TODO(rob): why could this value be None
+        if not p1_score:
+            p1_score = 0
+        if not p2_score:
+            p2_score = 0
+
         env.reset()
         wins.append(p1_score > p2_score)
         print(f"Round {i+1}: {p1_score} - {p2_score}")
