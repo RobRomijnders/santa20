@@ -21,6 +21,15 @@ A greedy policy will take action <img alt="$A_t = arg \max_a Q_t(a) $" src="svgs
 
 An <img alt="$\epsilon$" src="svgs/7ccca27b5ccc533a2dd72dc6fa28ed84.svg" align="middle" width="6.6724515pt" height="14.15535pt"/> greedy policy will take a random action instead of the greedy action with probability <img alt="$\epsilon$" src="svgs/7ccca27b5ccc533a2dd72dc6fa28ed84.svg" align="middle" width="6.6724515pt" height="14.15535pt"/>
 
+## Estimation methods
+
+We can make a running estimate for a stochastic process <img alt="$x_i$" src="svgs/9fc20fb1d3825674c6a279cb0d5ca636.svg" align="middle" width="14.045955pt" height="14.15535pt"/> using:
+
+<img alt="$\mu_t = \frac{\sum_{i&lt;t} w_i x_i }{\sum_{i&lt;t} w_i}$" src="svgs/77a0144ac85bf3048fc605510f7fe3b1.svg" align="middle" width="101.76408pt" height="36.50856pt"/>
+<img alt="$\sigma^2_t = \frac{\sum_{i&lt;t} w_i (x_i - \mu_i)^2 }{\sum_{i&lt;t} w_i}$" src="svgs/8690bcffe5346f8bb0d5e46f79ef390d.svg" align="middle" width="143.592735pt" height="39.76302pt"/>
+
+Where <img alt="$w_i$" src="svgs/c2a29561d89e139b3c7bffe51570c3ce.svg" align="middle" width="16.41948pt" height="14.15535pt"/> are arbitrary non-negative weighting coefficients.
+
 # Render latex
 
 Command to render latex in Readme. This uses [readme2tex](https://github.com/leegao/readme2tex)

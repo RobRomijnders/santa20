@@ -21,6 +21,15 @@ A greedy policy will take action $A_t = arg \max_a Q_t(a) $
 
 An $\epsilon$ greedy policy will take a random action instead of the greedy action with probability $\epsilon$
 
+## Estimation methods
+
+We can make a running estimate for a stochastic process $x_i$ using:
+
+$\mu_t = \frac{\sum_{i<t} w_i x_i }{\sum_{i<t} w_i}$
+$\sigma^2_t = \frac{\sum_{i<t} w_i (x_i - \mu_i)^2 }{\sum_{i<t} w_i}$
+
+Where $w_i$ are arbitrary non-negative weighting coefficients.
+
 # Render latex
 
 Command to render latex in Readme. This uses [readme2tex](https://github.com/leegao/readme2tex)
