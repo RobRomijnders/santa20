@@ -1,4 +1,7 @@
 Playing with [Santa 2020](https://www.kaggle.com/c/santa-2020/overview) challenge on Kaggle.
+Together with Vincent Warmerdam on 23 December 2020
+
+Our best submission is in idea02/santa.ipynb and uses decayed Thompson sampling.
 
 # Objective for RL
 
